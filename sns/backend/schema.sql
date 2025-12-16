@@ -1,0 +1,49 @@
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    api_token VARCHAR(255) NULL,
+    display_name VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS posts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    type VARCHAR(20) NOT NULL,
+    content TEXT NOT NULL, 
+    title VARCHAR(255),
+    image_path VARCHAR(255) NULL,
+    reply_to_id INTEGER NULL,
+    best_answer_id INTEGER NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (reply_to_id) REFERENCES posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (best_answer_id) REFERENCES posts(id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS quotes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    quoter_post_id INTEGER NOT NULL,
+    quoted_post_id INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (quoter_post_id) REFERENCES posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (quoted_post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS reactions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    post_id INTEGER NOT NULL,
+    emoji_char VARCHAR(10) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS rate_limits (
+    ip_address VARCHAR(45) NOT NULL,
+    endpoint VARCHAR(100) NOT NULL,
+    window_start INT NOT NULL,
+    request_count INT DEFAULT 1,
+    PRIMARY KEY (ip_address, endpoint)
+);

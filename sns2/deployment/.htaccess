@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /sns_2a/
+  
+  # API requests
+  RewriteRule ^api/(.*)$ api/public/index.php [L,QSA]
+
+  # All other requests -> index.html (SPA)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.html [L]
+</IfModule>

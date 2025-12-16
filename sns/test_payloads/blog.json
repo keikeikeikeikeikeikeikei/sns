@@ -1,0 +1,6 @@
+{
+    "user_id": 1,
+    "type": "blog",
+    "title": "My First Blog Post",
+    "content": "This is a longer form of content intended for the blog section. It can have a title and much more text."
+}

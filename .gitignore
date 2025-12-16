@@ -1,0 +1,15 @@
+# General
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Environment Variables
+.env

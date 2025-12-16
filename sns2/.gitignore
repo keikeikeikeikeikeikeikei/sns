@@ -1,0 +1,20 @@
+# Composer / PHP
+/vendor/
+composer.lock
+.env
+*.log
+
+# Node / Front-end
+/node_modules/
+dist/
+*.tsbuildinfo
+/.vite/
+.vscode/
+
+# OS / IDE
+Thumbs.db
+.DS_Store
+*.swp
+
+# Generated files
+backend/src/database/rate_limits.json
