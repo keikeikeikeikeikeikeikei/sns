@@ -1,6 +1,6 @@
 # Laravel Project (V1 Login System)
 
-このプロジェクトは、Laravel 11 をベースにしたメール認証およびSSO機能を持つWebアプリケーションです。
+このプロジェクトは、Laravel 11 をベースにしたメール認証機能を持つWebアプリケーションです。
 
 ## 前提条件
 
