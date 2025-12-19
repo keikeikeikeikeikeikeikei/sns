@@ -25,6 +25,22 @@
     - デプロイ用スクリプト (`deployment/`) や、セットアップガイド (`STARTUP_GUIDE.md`) が整備されています。
     - ライセンスファイルが含まれ、より配布・運用に適した形になっています。
 
+### 3. `laravel-auth-system/` (Legacy V1 with Auth)
+Laravel 11を使用した、認証機能付きの標準的なWebアプリケーション構成です。
+メール認証、ログイン、パスワードリセットなどの基本機能が実装されています。
+
+- **主な特徴**:
+    - **Framework**: Laravel 11 (PHP 8.2+)
+    - **Frontend**: Blade Templates + TailwindCSS (via CDN)
+    - **Database**: SQLite (configured for portability), MySQL compatible
+    - **Features**:
+        - 完全な認証システム (Breezeベース)
+        - ユーザーダッシュボード
+        - プロフィール編集機能
+- **用途**:
+    - Laravelベースでの再構築や、認証ロジックの参考用。
+    - すぐに立ち上がるローカルテスト環境として利用可能。
+
 ## プロジェクト共通仕様
 
 両プロジェクトは、以下の仕様に基づいたSNSアプリケーションの実装です。
