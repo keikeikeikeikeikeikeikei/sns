@@ -17,6 +17,12 @@
     - テストデータやデバッグ用の設定が残されています。
     - 機能ごとの単体動作確認や、試行錯誤のプロセスが含まれています。
 
+#### Screenshots
+| API Docs | Blog List | Q&A List |
+|----------|-----------|----------|
+| <img src="sns/screenshots/api_docs.png" width="250"> | <img src="sns/screenshots/blog_list.png" width="250"> | <img src="sns/screenshots/qa_list.png" width="250"> |
+
+
 ### 2. `sns2/` (Structure Refined)
 ディレクトリ構造を見直し、整理された本番デプロイメントを意識したバージョンです。
 
@@ -24,6 +30,16 @@
     - バックエンドとフロントエンドが整理され、標準的な構成になっています。
     - デプロイ用スクリプト (`deployment/`) や、セットアップガイド (`STARTUP_GUIDE.md`) が整備されています。
     - ライセンスファイルが含まれ、より配布・運用に適した形になっています。
+
+#### Screenshots
+| Login | Feed | Q&A |
+|-------|------|-----|
+| <img src="sns2/screenshots/01_login.png" width="250"> | <img src="sns2/screenshots/02_feed.png" width="250"> | <img src="sns2/screenshots/03_qa.png" width="250"> |
+
+| Blog | New Blog | Search |
+|------|----------|--------|
+| <img src="sns2/screenshots/04_blog.png" width="250"> | <img src="sns2/screenshots/06_new_blog.png" width="250"> | <img src="sns2/screenshots/07_search.png" width="250"> |
+
 
 ### 3. `laravel-auth-system/` (Legacy V1 with Auth)
 Laravel 11を使用した、認証機能付きの標準的なWebアプリケーション構成です。
@@ -40,6 +56,12 @@ Laravel 11を使用した、認証機能付きの標準的なWebアプリケー�
 - **用途**:
     - Laravelベースでの再構築や、認証ロジックの参考用。
     - すぐに立ち上がるローカルテスト環境として利用可能。
+
+#### Screenshots
+| Login | Dashboard |
+|-------|-----------|
+| <img src="laravel-auth-system/screenshots/login.png" width="300"> | <img src="laravel-auth-system/screenshots/dashboard.png" width="300"> |
+
 
 ## プロジェクト共通仕様
 
