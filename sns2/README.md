@@ -16,6 +16,20 @@
 - **検索機能** - 投稿・ユーザー横断検索
 - **ページネーション** - 無限スクロール対応
 
+## スクリーンショット
+
+| ログイン | つぶやき (Feed) |
+|---|---|
+| ![Login](screenshots/01_login.png) | ![Feed](screenshots/02_feed.png) |
+
+| Q&A | ブログ |
+|---|---|
+| ![Q&A](screenshots/03_qa.png) | ![Blog](screenshots/04_blog.png) |
+
+| 検索結果 | |
+|---|---|
+| ![Search](screenshots/07_search.png) | |
+
 ## セキュリティ機能
 
 - JWT認証（Bearer Token）
