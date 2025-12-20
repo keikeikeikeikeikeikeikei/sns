@@ -2,3 +2,5 @@
 .env
 database/*.sqlite
 *.log
+composer.phar
+.phpunit.result.cache

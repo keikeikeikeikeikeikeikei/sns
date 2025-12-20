@@ -18,3 +18,14 @@ Thumbs.db
 
 # Generated files
 backend/src/database/rate_limits.json
+
+# Large files / binary
+*.phar
+screenshots/
+*.png
+!screenshots/*.png 
+# Wait, we WANT the screenshots in the repo for the README. 
+# But the user said "size ga dekai mono" (large things) should be excluded.
+# Usually 7 pngs are fine. But "error_state.png" should be ignored.
+# I will ignore error_state.png explicitly.
+error_state.png
